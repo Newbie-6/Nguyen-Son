@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", sans-serif;
+  
+  --color-zinc-50: #fafafa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-zinc-950: #09090b;
+  
+  --color-brand-500: #3b82f6;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-50 font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .bg-dots {
+    background-image: radial-gradient(#27272a 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  
+  .glass {
+    @apply bg-zinc-950/80 backdrop-blur-md border border-zinc-800;
+  }
+
+  .bento-item-1 { grid-column: span 2; grid-row: span 2; }
+  .bento-item-2 { grid-column: span 2; grid-row: span 2; }
+}
